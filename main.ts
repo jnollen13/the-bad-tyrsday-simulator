@@ -36,6 +36,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         pause(2000)
         game.setDialogFrame(assets.image`d`)
         game.showLongText("    ready?", DialogLayout.Bottom)
+        game.setDialogCursor(assets.image`chain`)
         pause(500)
         statusbar = statusbars.create(27, 5, StatusBarKind.Health)
         pause(100)
@@ -207,11 +208,15 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
             mySprite15.setBounceOnWall(true)
             pause(10000)
             game.showLongText("You have a bad feeling...", DialogLayout.Bottom)
+            mySprite3.setVelocity(101, 0)
+            mySprite15.setVelocity(100, 100)
+            pause(10000)
+            game.showLongText("", DialogLayout.Bottom)
         }
         pause(15700)
         game.showLongText("you feel like your being watched...", DialogLayout.Bottom)
         mySprite13 = sprites.create(assets.image`laserwarning`, SpriteKind.incoming)
-        for (let index = 0; index < randint(75, 110); index++) {
+        for (let index = 0; index < randint(10, 110); index++) {
             mySprite13.setKind(SpriteKind.incoming)
             mySprite13.setImage(assets.image`laserwarning`)
             mySprite13.setPosition(randint(48, 113), 45)
