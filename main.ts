@@ -176,7 +176,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
             option = 0
             pause(100)
             shake = 0
-            pause(5000)
+            pause(2000)
             effects.clouds.startScreenEffect()
             pause(500)
             mySprite.setImage(assets.image`heart-s1`)
@@ -185,11 +185,11 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
             mySprite9.setVelocity(50, 50)
             mySprite9.setScale(1, ScaleAnchor.Middle)
             mySprite9.setBounceOnWall(true)
-            pause(60000)
+            pause(30000)
             game.showLongText("you have a bad feeling...", DialogLayout.Bottom)
             mySprite9.setVelocity(110, 110)
             mySprite3.setVelocity(333, randint(-5, 5))
-            pause(42648)
+            pause(10000)
             game.showLongText("You feel like you're going to die...", DialogLayout.Bottom)
             mySprite10 = sprites.create(assets.image`ghost`, SpriteKind.hdmg)
             pause(500)
@@ -200,18 +200,23 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
             statusbar.max = 75
             option = 0
             mySprite3.startEffect(effects.fire)
-            pause(2000)
+            pause(5000)
             shake = 0
             pause(5000)
             mySprite15 = sprites.create(assets.image`rock`, SpriteKind.dmg)
             mySprite15.setVelocity(50, 50)
             mySprite15.setBounceOnWall(true)
-            pause(10000)
+            pause(20000)
             game.showLongText("You have a bad feeling...", DialogLayout.Bottom)
-            mySprite3.setVelocity(101, 0)
+            mySprite3.setVelocity(343, 0)
             mySprite15.setVelocity(100, 100)
-            pause(10000)
+            pause(60000)
             game.showLongText("", DialogLayout.Bottom)
+            mySprite16 = sprites.create(assets.image`jumpy`, SpriteKind.hdmg)
+            pause(1000)
+            mySprite16.setBounceOnWall(true)
+            mySprite16.setVelocity(50, 50)
+            pause(30000)
         }
         pause(15700)
         game.showLongText("you feel like your being watched...", DialogLayout.Bottom)
@@ -230,6 +235,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         mySprite14 = sprites.create(assets.image`shooterpower`, SpriteKind.shooter2)
         mySprite13 = sprites.create(assets.image`bulletL`, SpriteKind.dmg3)
         tiles.placeOnTile(mySprite14, tiles.getTileLocation(8, 4))
+        mySprite13.setPosition(106, 53)
     }
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.dmg1, function (sprite, otherSprite) {
@@ -319,6 +325,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.hdmg, function (sprite, otherSpr
 })
 let mySprite14: Sprite = null
 let mySprite13: Sprite = null
+let mySprite16: Sprite = null
 let mySprite15: Sprite = null
 let mySprite10: Sprite = null
 let mySprite9: Sprite = null

@@ -79,11 +79,6 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "spearbounce"
     },
-    "image17": {
-        "data": "hwQDAAMAAAARAAAAEAEAABEAAAA=",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "heart-s1"
-    },
     "image18": {
         "data": "hwQQABAAAAAAAAAAAAAAAAAAwMwAAAAAAAAsIgwAAAAAwEIiwgAAAAAALCQiDAAAAADAIiLCAAAAACwiJAwAAADAIiXCAAAAAAAsIgwAAAAAAMDMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
@@ -129,11 +124,6 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "h"
     },
-    "image23": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAiAgAAAAAAICIiAAAAAAAgIiIAAAAAACAiIgAAAAAAICJiAAAAAAAJJgoBAAAAABFiEgFAAAAAFCCUgAAAAAAACQEAAAAAAAARQUAAAAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "bulletL"
-    },
     "image24": {
         "data": "hwQQABAAAAAAABGZmRkBAAAAEGFmEQAAAAAAERgBAAAAAAAREQEAAAAAAPHxAQAAAAAQ8f8RAAAAABEREREBAAAAEREREQEAAAARIiESAQAAABEiIRIBAAAAESIhEgEAAAARERERAQAAABAREREAAAAAUFVVVQAAAABQUFBQAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
@@ -143,6 +133,21 @@
         "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMwMAAAAAADA3c0AAAAAANzd3QwAAAAAwN3dzQAAAADcHd0MAAAAAMDdzQAAAAAAAMwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "heart5765"
+    },
+    "image26": {
+        "data": "hwQQAAYAAAAAEREAAAEAAFBYAAAACAAAICIAACAhAAAgLwAAICIAACAiAAAgLwAAICEAACAiAAAACAAAUFgAAAABAAAAEREA",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "jumpy"
+    },
+    "image17": {
+        "data": "hwQDAAMAAAARAAAA8AEAABEAAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "heart-s1"
+    },
+    "image23": {
+        "data": "hwQMAAcAAAAAgAAAAIgIAICYiACAiYgAgIiIAICIiAAkiCgERYhIBVCCUgAAJAQAAEUFAABQAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "bulletL"
     },
     "anim1": {
         "namespace": "myAnimations",

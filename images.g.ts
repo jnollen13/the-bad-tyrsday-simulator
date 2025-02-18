@@ -695,12 +695,6 @@ bbb
 . . . . . . . 2 . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `;
-            case "image17":
-            case "heart-s1":return img`
-1 . 1 
-1 1 1 
-. 1 . 
-`;
             case "image18":
             case "heart1":return img`
 . . . . . . . . . . . . . . . . 
@@ -1270,25 +1264,6 @@ ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `;
-            case "image23":
-            case "bulletL":return img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . 4 5 . . . . . . . 
-. . . 8 8 8 8 2 4 5 . . . . . . 
-. . 8 8 8 8 9 8 8 2 4 5 . . . . 
-. 8 8 8 8 8 8 9 8 8 2 4 5 . . . 
-. . 8 8 8 8 8 8 8 2 4 5 . . . . 
-. . . 8 8 8 8 2 4 5 . . . . . . 
-. . . . . . . 4 5 . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`;
             case "image24":
             case "shooterpower":return img`
 . . . . . . . . . . . . . . . . 
@@ -1326,6 +1301,31 @@ ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
+`;
+            case "image26":
+            case "jumpy":return img`
+. . . . . . . . . . . . . . . . 
+. . 5 . 2 2 2 2 2 2 2 2 . 5 . . 
+1 1 8 8 2 1 f 2 2 f 1 2 8 8 1 1 
+1 . 5 . 2 2 2 2 2 2 2 2 . 5 . 1 
+1 . . . . . . . . . . . . . . 1 
+1 . . . . . . . . . . . . . . 1 
+`;
+            case "image17":
+            case "heart-s1":return img`
+1 . 1 
+1 f 1 
+. 1 . 
+`;
+            case "image23":
+            case "bulletL":return img`
+. . . . . . 4 5 . . . . 
+. . 8 8 8 8 2 4 5 . . . 
+. 8 8 9 8 8 8 8 2 4 5 . 
+8 8 9 8 8 8 8 8 8 2 4 5 
+. 8 8 8 8 8 8 8 2 4 5 . 
+. . 8 8 8 8 2 4 5 . . . 
+. . . . . . 4 5 . . . . 
 `;
         }
         return null;
