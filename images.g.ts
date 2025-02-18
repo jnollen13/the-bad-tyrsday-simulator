@@ -1311,12 +1311,6 @@ ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 1 . . . . . . . . . . . . . . 1 
 1 . . . . . . . . . . . . . . 1 
 `;
-            case "image17":
-            case "heart-s1":return img`
-1 . 1 
-1 f 1 
-. 1 . 
-`;
             case "image23":
             case "bulletL":return img`
 . . . . . . 4 5 . . . . 
@@ -1326,6 +1320,12 @@ ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 . 8 8 8 8 8 8 8 2 4 5 . 
 . . 8 8 8 8 2 4 5 . . . 
 . . . . . . 4 5 . . . . 
+`;
+            case "image17":
+            case "heart-s1":return img`
+1 . 1 
+1 1 1 
+. 1 . 
 `;
         }
         return null;
