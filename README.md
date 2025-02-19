@@ -1,7 +1,7 @@
  
 
 
-> Open this page at [https://jnollen13.github.io/the-bad-tyrsday-simulator/](https://jnollen13.github.io/the-bad-tyrsday-simulator/)
+> Open this page at (https://arcade.makecode.com/S81477-25968-50607-70383)
 
 ## Use as Extension
 
