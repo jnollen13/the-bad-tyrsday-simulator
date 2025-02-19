@@ -149,6 +149,16 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "heart-s1"
     },
+    "image27": {
+        "data": "hwQDAAkAAAAREQERAQAAAAHQ3d0AAAAAEREBEQEAAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "chainh3"
+    },
+    "image28": {
+        "data": "hwQDAAkAAAARARERAQAAANDd3QABAAAAEQEREQEAAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "chainfliph3"
+    },
     "anim1": {
         "namespace": "myAnimations",
         "id": "anim1",

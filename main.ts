@@ -9,6 +9,12 @@ namespace SpriteKind {
     export const shooter2 = SpriteKind.create()
     export const dmg3 = SpriteKind.create()
 }
+scene.onOverlapTile(SpriteKind.dmg3, assets.tile`myTile1`, function (sprite, location) {
+    mySprite13.setPosition(136, randint(56, 96))
+    tiles.placeOnTile(mySprite13, mySprite14.tilemapLocation())
+    pause(1)
+    mySprite13.setVelocity(randint(-50, -100), randint(-1, 1))
+})
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     if (!(option == 0)) {
         if (option == 2) {
@@ -217,6 +223,8 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
             mySprite16.setBounceOnWall(true)
             mySprite16.setVelocity(50, 50)
             pause(30000)
+        } else if (option == 5) {
+            option = 0
         }
         pause(15700)
         game.showLongText("you feel like your being watched...", DialogLayout.Bottom)
@@ -232,10 +240,26 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         }
         sprites.destroy(mySprite13, effects.clouds, 500)
         pause(1000)
+        game.showLongText("you have a sinking feeling...", DialogLayout.Bottom)
         mySprite14 = sprites.create(assets.image`shooterpower`, SpriteKind.shooter2)
         mySprite13 = sprites.create(assets.image`bulletL`, SpriteKind.dmg3)
         tiles.placeOnTile(mySprite14, tiles.getTileLocation(8, 4))
         mySprite13.setPosition(106, 53)
+        mySprite13.setVelocity(-111, 0)
+        mySprite13.setFlag(SpriteFlag.GhostThroughWalls, true)
+        pause(1000)
+        mySprite13.startEffect(effects.fire)
+        pause(20000)
+        game.showLongText("you feel weak...", DialogLayout.Bottom)
+        end = 1
+        statusbar.value += 5
+        sprites.destroyAllSpritesOfKind(SpriteKind.hdmg)
+        sprites.destroyAllSpritesOfKind(SpriteKind.dmg2)
+        mySprite17 = sprites.create(assets.image`chainh3`, SpriteKind.dmg2)
+        mySprite17.setPosition(50, 92)
+        mySprite18 = sprites.create(assets.image`chainfliph3`, SpriteKind.dmg2)
+        mySprite18.setPosition(50, 53)
+        pause(89)
     }
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.dmg1, function (sprite, otherSprite) {
@@ -246,6 +270,9 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.dmg1, function (sprite, otherSpr
 scene.onOverlapTile(SpriteKind.dmg1, assets.tile`myTile8`, function (sprite, location) {
     tiles.placeOnTile(mySprite3, mySprite2.tilemapLocation())
 })
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    option = 5
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.dmg, function (sprite, otherSprite) {
     statusbar.value += -1
     pause(100)
@@ -253,6 +280,14 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.dmg, function (sprite, otherSpri
 sprites.onOverlap(SpriteKind.Player, SpriteKind.dmg2, function (sprite, otherSprite) {
     statusbar.value += -5
     pause(136)
+})
+sprites.onOverlap(SpriteKind.dmg3, SpriteKind.Player, function (sprite, otherSprite) {
+    if (0 == end) {
+        statusbar.value += -3
+    } else if (1 == end) {
+        statusbar.value += -10
+    }
+    pause(randint(499, 501))
 })
 statusbars.onZero(StatusBarKind.Health, function (status) {
     effects.bubbles.endScreenEffect()
@@ -269,6 +304,8 @@ statusbars.onZero(StatusBarKind.Health, function (status) {
     controller.moveSprite(mySprite, 0, 0)
     sprites.destroyAllSpritesOfKind(SpriteKind.shooter1)
     sprites.destroyAllSpritesOfKind(SpriteKind.hdmg)
+    sprites.destroyAllSpritesOfKind(SpriteKind.dmg3)
+    sprites.destroyAllSpritesOfKind(SpriteKind.shooter2)
     sprites.destroyAllSpritesOfKind(SpriteKind.dmg2)
     shake = 0
     sprites.destroyAllSpritesOfKind(SpriteKind.incoming)
@@ -298,13 +335,6 @@ statusbars.onZero(StatusBarKind.Health, function (status) {
 sprites.onOverlap(SpriteKind.shooter1, SpriteKind.dmg1, function (sprite, otherSprite) {
     tiles.placeOnTile(mySprite2, tiles.getTileLocation(1, randint(3, 5)))
 })
-scene.onOverlapTile(SpriteKind.dmg3, assets.tile`myTile10`, function (sprite, location) {
-    mySprite13.setPosition(136, randint(56, 96))
-    tiles.placeOnTile(mySprite13, mySprite14.tilemapLocation())
-    mySprite13.follow(mySprite14, 10)
-    pause(1)
-    mySprite13.setVelocity(randint(-50, -100), randint(-1, 1))
-})
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     if (!(!(!(option == 0)))) {
         if (option == 3) {
@@ -319,12 +349,16 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
         }
     }
 })
+sprites.onOverlap(SpriteKind.shooter2, SpriteKind.dmg3, function (sprite, otherSprite) {
+    tiles.placeOnTile(mySprite14, tiles.getTileLocation(8, randint(3, 5)))
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.hdmg, function (sprite, otherSprite) {
     statusbar.value += -9
-    pause(111)
+    pause(234)
 })
-let mySprite14: Sprite = null
-let mySprite13: Sprite = null
+let mySprite18: Sprite = null
+let mySprite17: Sprite = null
+let end = 0
 let mySprite16: Sprite = null
 let mySprite15: Sprite = null
 let mySprite10: Sprite = null
@@ -340,6 +374,8 @@ let mySprite4: Sprite = null
 let mySprite3: Sprite = null
 let mySprite2: Sprite = null
 let statusbar: StatusBarSprite = null
+let mySprite14: Sprite = null
+let mySprite13: Sprite = null
 let textSprite2: TextSprite = null
 let textSprite3: TextSprite = null
 let mySprite: Sprite = null

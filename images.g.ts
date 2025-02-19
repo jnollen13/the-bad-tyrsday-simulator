@@ -1327,6 +1327,30 @@ ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 1 1 1 
 . 1 . 
 `;
+            case "image27":
+            case "chainh3":return img`
+1 1 1 
+1 . 1 
+1 . 1 
+1 d 1 
+1 d 1 
+. d . 
+1 d 1 
+1 d 1 
+1 . 1 
+`;
+            case "image28":
+            case "chainfliph3":return img`
+1 . 1 
+1 d 1 
+1 d 1 
+. d . 
+1 d 1 
+1 d 1 
+1 . 1 
+1 . 1 
+1 1 1 
+`;
         }
         return null;
     })
